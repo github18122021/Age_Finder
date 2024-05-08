@@ -29,11 +29,23 @@ function Page() {
     const date1  = new Date(dob);
     const date2 = new Date(secondDate);
 
+    if(isNaN(date1.getTime()) || isNaN(date2.getTime())) {
+      toast.error("Invalid Date!!", {
+        theme: "blue"
+      });
+
+      setDisabled(false);
+      return;
+    }
+
     if(date1 > date2) {
       toast.error("Invalid Date Range!!", {
         theme: "blue"
       });
-    }
+
+      setDisabled(false);
+      return;
+    } 
 
     let difference = date2.getTime() - date1.getTime();
 
@@ -70,8 +82,9 @@ function Page() {
 
     setTimeout(() => {
       setDisabled(false);
+      console.log("done");
+    }, 5000);
     
-    }, 1000)
   }
 
   return (
@@ -91,8 +104,10 @@ function Page() {
           </section>
 
           <section className="text-center">
-            <button type="submit" className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded" onClick={calculateAge} disabled={disabled}>
-              Calculate Age
+            <button type="submit" className={`bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded`} onClick={calculateAge} disabled={disabled}>
+              {
+                disabled ? "Calculating..." : "Calculate"
+              }
             </button>
           </section>
         </form>
