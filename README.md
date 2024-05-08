@@ -1,6 +1,6 @@
 # Age Calculator
 
-This Age Calculator is a simple React application designed to calculate the age of a person based on their date of birth and a selected date. It provides accurate age calculations in years, months, days, hours, minutes, and seconds.
+This Age Calculator is a simple React application built inside Next.js. It is designed to calculate the age of a person based on their date of birth and a selected date, providing accurate age calculations in years, months, days, hours, minutes, and seconds.
 
 ## Features
 
@@ -12,7 +12,8 @@ This Age Calculator is a simple React application designed to calculate the age 
 
 ## Technologies Used
 
-- **React**: The application is built using React, a popular JavaScript library for building user interfaces.
+- **Next.js**: The application is built using Next.js, a React framework for server-side rendering, static site generation, and more.
+- **React**: Next.js is built on top of React, a popular JavaScript library for building user interfaces.
 - **React Toastify**: Toast notifications are implemented using the React Toastify library to provide feedback to the user.
 - **Tailwind CSS**: The styling is done using Tailwind CSS, a utility-first CSS framework, allowing for rapid development and easy customization.
 
@@ -21,7 +22,7 @@ This Age Calculator is a simple React application designed to calculate the age 
 1. Clone the repository to your local machine.
 2. Navigate to the project directory.
 3. Install dependencies using `npm install`.
-4. Start the development server with `npm start`.
+4. Start the development server with `npm run dev`.
 5. Access the application in your browser at `http://localhost:3000`.
 
 ## Live Demo
